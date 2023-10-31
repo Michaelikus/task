@@ -1,0 +1,8 @@
+---
+- name: Prerequisites for jenkins installation
+  ansible.builtin.dnf:
+    name:
+      - curl
+      - fontconfig 
+      - java-17-openjdk
+    state: present

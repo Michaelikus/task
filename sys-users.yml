@@ -1,0 +1,5 @@
+---
+- hosts: sber
+  become: true
+  roles:
+    - sys-users

@@ -1,0 +1,7 @@
+---
+- name: Setup users
+  ansible.builtin.include_tasks:
+    file: setup_accounts.yml
+- name: Setup sudoers
+  ansible.builtin.include_tasks:
+    file: setup_sudoers.yml

@@ -1,0 +1,8 @@
+---
+- name: Allow passwordless sudo
+  lineinfile:
+    dest: /etc/sudoers
+    state: present
+    regexp: "^%{{ OS[ansible_facts['distribution']]['sudo_group'] }}"
+    line: "%{{ OS[ansible_facts['distribution']]['sudo_group'] }} ALL=(ALL) NOPASSWD: ALL"
+    validate: 'visudo -cf %s'

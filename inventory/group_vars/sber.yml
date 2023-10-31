@@ -1,0 +1,38 @@
+OS:
+  Debian:
+    sudo_group: sudo
+  Fedora:
+    sudo_group: wheel
+
+typical_packages:
+  - jq
+  - htop
+  - tmux
+  - screen
+  - mc
+  - net-tools
+
+users:
+- name: ansible
+  Debian:
+    groups: ['users', 'sudo']
+  Fedora:
+    groups: ['users', 'wheel']
+  shell: "/bin/bash"
+  public_key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHytqDtx9+m9HdMl4q2rjlnhlHlG9jS7uKUmiqg+IlMf ansible"
+
+- name: fox
+  Debian:
+    groups: ['users', 'sudo']
+  Fedora:
+    groups: ['users', 'wheel']
+  shell: "/bin/bash"
+  public_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC90SVlMPD67rrfdmMYAjl/N+luS9KeY9wwVn53Q4w/u0ql6lPMbhodulNlTL3lJsC3N36cyEE7o9BHogUDdT7Lsu0lhZSLi/gIH3okBg4+ogevPnJDWVCbQjScLqsSW+sGLvbDuFjwFbbCKn85Qx3/7r9oW9qW0BYdh4DT13FMo7MbaWnET1N4hwVQF9ofKM/n6cRFNkdvdWYBz/rknMoVMD/hXAaq8USqW//h9n6gckZ/GVSfQ33VOPzo81RrpyLS6Z382vVCvT8Ztom+bHrpIHQ3RhG+nK0kV9owfvvIQ4VYYrI7De3/8KIJzawJd0JcDN164Sk8G+VDyxqAyeZevG2ZXONIwNWWINSXdgp/ZTicNCky8Gdhw99zz9NOXrjbs1Ua5KKtmyO/z6aC93LYcGtMdF3kqhBdGK+yUoHnKeUWXSMrfGKy7y4pMkcCKu2U+RScSr+20izANOuCsLYE8Md+ennojUOP1ofKL4jfOqJhVjSkZmShH8VdUOUbGAc= fox"
+
+- name: zomgdev
+  Debian:
+    groups: ['users', 'sudo']
+  Fedora:
+    groups: ['users', 'wheel']
+  shell: "/bin/bash"
+  public_key: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDVddnqoig2VFfRdldezFz883oiffpv57G1Gl+tWV1yaE66d0BvEp+0yoROad9S9ajKQaoE8mIf6ahVtChnJArs0JTZ2ho6NIAN7j574b0X6Bk7gTGoHjztnW+b8EeSjOhXt9Jv3iuvZsbHmRRqwKlY0+kh8msO5hgQZKdk2H4yKNQvYnjXFvTAlI2H8EeZaBaA4y71BLQ2idN3Pc4s9fZAWwSNE5TBCmvhHK2Rxh2l3Cfdtz44ExKZF1dIenLBl3X3oYtHjsuWmPngDTdnoPIUYE+3zCHQweaoEkgdi9Pn0u61miY7zxB5tDWuS3AYqlCDCVC1c+N3CFcegmEH7BpXjbIGzG8P9JY6spVzUL8gT++8DFCossUaXUA4aVIioxdbV0NAvIzKQauL+Ki9q8kK2+O+O9trp0N4fyHM3a0jXx02aellic+z63m8cLpMvxvm6t8cpnJdFlTU2Eqtz9kxLFKagfWGREMv2IlZXb4RGUxse7v7jbE9jvrALBkzVIE= zomgdev"

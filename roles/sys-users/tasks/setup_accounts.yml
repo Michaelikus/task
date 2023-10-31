@@ -1,0 +1,16 @@
+---
+- name: Add users for {{ ansible_facts['distribution'] }}
+  ansible.builtin.user:
+    name: "{{ item.name }}"
+    groups: "{{ item[ansible_facts['distribution']]['groups'] }}"
+    shell: "{{ item.shell }}"
+    state: present
+  loop: "{{ users }}"
+
+- name: Set public key
+  ansible.posix.authorized_key:
+    user: "{{ item.name }}"
+    key: "{{ item.public_key }}"
+    manage_dir: false
+    state: present
+  loop: "{{ users }}"

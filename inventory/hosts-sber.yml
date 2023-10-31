@@ -1,0 +1,13 @@
+sber:
+  hosts:
+    fedora01:
+      ansible_host: 192.168.2.181
+    fedora02:
+      ansible_host: 192.168.2.182
+    fedora03:
+      ansible_host: 192.168.2.183
+
+jenkins:
+  hosts:
+    fedora03:
+      ansible_host: 192.168.2.183

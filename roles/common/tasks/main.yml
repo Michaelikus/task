@@ -1,0 +1,23 @@
+---
+- name: Install typical packages
+  ansible.builtin.dnf:
+    state: present
+    name: {{ item }}
+    loop: {{ typical_packages }}
+  tags:
+  - base_pkgs
+
+- name: Disable SELinux
+  ansible.posix.selinux:
+    state: disabled
+  tags:
+  - selinux
+
+- name: Disable firewalld
+  ansible.builtin.systemd:
+    state: stopped
+    enabled: false
+    name: firewalld
+  tags:
+  - firewalld
+
