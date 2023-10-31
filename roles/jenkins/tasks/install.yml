@@ -5,7 +5,7 @@
       - jenkins
     state: present
 
-- name: Disable firewalld
+- name: Starting Jenkins service
   ansible.builtin.systemd:
     state: started
     enabled: true

@@ -11,3 +11,8 @@ jenkins:
   hosts:
     fedora03:
       ansible_host: 192.168.2.183
+
+docker:
+  hosts:
+    fedora03:
+      ansible_host: 192.168.2.183

@@ -1,0 +1,17 @@
+---
+- name: Install docker-ce package
+  ansible.builtin.dnf:
+    name:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+      - docker-buildx-plugin
+      - docker-compose-plugin
+      - git
+    state: present
+
+#- name: Disable firewalld
+#  ansible.builtin.systemd:
+#    state: started
+#    enabled: true
+#    name: jenkins

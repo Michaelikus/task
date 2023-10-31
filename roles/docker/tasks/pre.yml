@@ -1,0 +1,7 @@
+---
+- name: Prerequisites for jenkins installation
+  ansible.builtin.dnf:
+    name:
+      - curl
+      - dnf-plugins-core
+    state: present

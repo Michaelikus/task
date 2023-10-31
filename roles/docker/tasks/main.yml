@@ -1,0 +1,11 @@
+---
+- name: Setup Jenkins
+  ansible.builtin.include_tasks:
+    file: "{{ item }}"
+  loop:
+    - pre.yml
+    - repo.yml
+    - install.yml
+    - conf.yml
+  tags:
+  - jenkins
