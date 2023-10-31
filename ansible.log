@@ -1,0 +1,59 @@
+2023-10-31 16:17:50,627 p=1 u=root n=ansible | PLAY [jenkins] ****************************************************************************************************************************************************************************************************
+2023-10-31 16:17:50,651 p=1 u=root n=ansible | TASK [Gathering Facts] ********************************************************************************************************************************************************************************************
+2023-10-31 16:17:52,764 p=1 u=root n=ansible | ok: [fedora03]
+2023-10-31 16:17:52,766 p=1 u=root n=ansible | ok: [fedora01]
+2023-10-31 16:17:52,787 p=1 u=root n=ansible | TASK [jenkins : Setup Jenkins] ************************************************************************************************************************************************************************************
+2023-10-31 16:17:52,817 p=1 u=root n=ansible | included: /home/michaelikus/ansible/roles/jenkins/tasks/pre.yml for fedora01, fedora03 => (item=pre.yml)
+2023-10-31 16:17:52,819 p=1 u=root n=ansible | included: /home/michaelikus/ansible/roles/jenkins/tasks/repo.yml for fedora01, fedora03 => (item=repo.yml)
+2023-10-31 16:17:52,821 p=1 u=root n=ansible | included: /home/michaelikus/ansible/roles/jenkins/tasks/install.yml for fedora01, fedora03 => (item=install.yml)
+2023-10-31 16:17:52,826 p=1 u=root n=ansible | TASK [jenkins : Prerequisites for jenkins installation] ***********************************************************************************************************************************************************
+2023-10-31 16:17:54,793 p=1 u=root n=ansible | ok: [fedora03]
+2023-10-31 16:18:47,680 p=1 u=root n=ansible | changed: [fedora01]
+2023-10-31 16:18:47,698 p=1 u=root n=ansible | TASK [jenkins : Import key] ***************************************************************************************************************************************************************************************
+2023-10-31 16:18:48,948 p=1 u=root n=ansible | ok: [fedora03]
+2023-10-31 16:18:49,426 p=1 u=root n=ansible | changed: [fedora01]
+2023-10-31 16:18:49,442 p=1 u=root n=ansible | TASK [jenkins : Set repository file] ******************************************************************************************************************************************************************************
+2023-10-31 16:18:50,551 p=1 u=root n=ansible | ok: [fedora03]
+2023-10-31 16:18:50,553 p=1 u=root n=ansible | changed: [fedora01]
+2023-10-31 16:18:50,558 p=1 u=root n=ansible | TASK [jenkins : Install Jenkins package] **************************************************************************************************************************************************************************
+2023-10-31 16:18:52,332 p=1 u=root n=ansible | ok: [fedora03]
+2023-10-31 16:20:48,866 p=1 u=root n=ansible | changed: [fedora01]
+2023-10-31 16:20:48,877 p=1 u=root n=ansible | TASK [jenkins : Starting Jenkins service] *************************************************************************************************************************************************************************
+2023-10-31 16:20:50,419 p=1 u=root n=ansible | ok: [fedora03]
+2023-10-31 16:21:35,771 p=1 u=root n=ansible | fatal: [fedora01]: FAILED! => {"changed": false, "msg": "Unable to start service jenkins: Job for jenkins.service failed because a timeout was exceeded.\nSee \"systemctl status jenkins.service\" and \"journalctl -xeu jenkins.service\" for details.\n"}
+2023-10-31 16:21:35,781 p=1 u=root n=ansible | TASK [docker : Setup Jenkins] *************************************************************************************************************************************************************************************
+2023-10-31 16:21:35,802 p=1 u=root n=ansible | included: /home/michaelikus/ansible/roles/docker/tasks/pre.yml for fedora03 => (item=pre.yml)
+2023-10-31 16:21:35,805 p=1 u=root n=ansible | included: /home/michaelikus/ansible/roles/docker/tasks/repo.yml for fedora03 => (item=repo.yml)
+2023-10-31 16:21:35,806 p=1 u=root n=ansible | included: /home/michaelikus/ansible/roles/docker/tasks/install.yml for fedora03 => (item=install.yml)
+2023-10-31 16:21:35,811 p=1 u=root n=ansible | TASK [docker : Prerequisites for jenkins installation] ************************************************************************************************************************************************************
+2023-10-31 16:21:37,642 p=1 u=root n=ansible | ok: [fedora03]
+2023-10-31 16:21:37,658 p=1 u=root n=ansible | TASK [docker : Import docker fedora key] **************************************************************************************************************************************************************************
+2023-10-31 16:21:38,684 p=1 u=root n=ansible | ok: [fedora03]
+2023-10-31 16:21:38,789 p=1 u=root n=ansible | TASK [docker : Set docker-ce repository file] *********************************************************************************************************************************************************************
+2023-10-31 16:21:39,640 p=1 u=root n=ansible | ok: [fedora03]
+2023-10-31 16:21:39,646 p=1 u=root n=ansible | TASK [docker : Install docker-ce package] *************************************************************************************************************************************************************************
+2023-10-31 16:21:41,433 p=1 u=root n=ansible | ok: [fedora03]
+2023-10-31 16:21:41,450 p=1 u=root n=ansible | TASK [docker : Starting docker] ***********************************************************************************************************************************************************************************
+2023-10-31 16:21:42,264 p=1 u=root n=ansible | ok: [fedora03]
+2023-10-31 16:21:42,291 p=1 u=root n=ansible | PLAY RECAP ********************************************************************************************************************************************************************************************************
+2023-10-31 16:21:42,291 p=1 u=root n=ansible | fedora01                   : ok=8    changed=4    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-10-31 16:21:42,292 p=1 u=root n=ansible | fedora03                   : ok=17   changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2023-10-31 19:32:26,913 p=46570 u=michaelikus n=ansible | [WARNING]: Could not match supplied host pattern, ignoring: sber
+
+2023-10-31 19:32:26,914 p=46570 u=michaelikus n=ansible | playbook: common.yml
+2023-10-31 19:32:27,751 p=46577 u=michaelikus n=ansible | {
+    "ansible.builtin.runas": "Run As user",
+    "ansible.builtin.su": "Substitute User",
+    "ansible.builtin.sudo": "Substitute User DO",
+    "ansible.netcommon.enable": "Switch to elevated permissions on a network device",
+    "community.general.doas": "Do As user",
+    "community.general.dzdo": "Centrify's Direct Authorize",
+    "community.general.ksu": "Kerberos substitute user",
+    "community.general.machinectl": "Systemd's machinectl privilege escalation",
+    "community.general.pbrun": "PowerBroker run",
+    "community.general.pfexec": "profile based execution",
+    "community.general.pmrun": "Privilege Manager run",
+    "community.general.sesu": "CA Privileged Access Manager",
+    "community.general.sudosu": "Run tasks using sudo su -",
+    "containers.podman.podman_unshare": "Run tasks using podman unshare"
+}

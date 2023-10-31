@@ -2,8 +2,9 @@
 - name: Install typical packages
   ansible.builtin.dnf:
     state: present
-    name: {{ item }}
-    loop: {{ typical_packages }}
+    name: "{{ item }}"
+  loop: 
+    - "{{ typical_packages }}"
   tags:
   - base_pkgs
 
@@ -21,3 +22,8 @@
   tags:
   - firewalld
 
+- name: Tuning sshd
+  ansible.builtin.include_tasks:
+    file: sshd.yml
+  tags:
+  - sshd

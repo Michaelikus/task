@@ -5,4 +5,7 @@
       - curl
       - fontconfig 
       - java-17-openjdk
+      - python-virtualenv
+      - python3-pip
+      - sshpass
     state: present

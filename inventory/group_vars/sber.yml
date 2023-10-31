@@ -1,17 +1,3 @@
-OS:
-  Debian:
-    sudo_group: sudo
-  Fedora:
-    sudo_group: wheel
-
-typical_packages:
-  - jq
-  - htop
-  - tmux
-  - screen
-  - mc
-  - net-tools
-
 users:
 - name: ansible
   Debian:
