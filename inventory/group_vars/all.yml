@@ -11,6 +11,7 @@ typical_packages:
   - screen
   - mc
   - net-tools
+  - python3-libselinux
 
 # Набор типовых настроек шабона sshd_config.j2 для всех хостов
 # В последствии доп опции можно подбрасывать в файлы /etc/ssh/sshd_config.d/*.conf (опция Include /etc/ssh/sshd_config.d/*.conf)
