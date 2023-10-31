@@ -1,5 +1,6 @@
 ---
 - hosts: sber
+  become: true
   roles:
     - common
 
