@@ -1,0 +1,208 @@
+Started by user fox
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/task
+The recommended git tool is: NONE
+No credentials specified
+ > git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/task/.git # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/Michaelikus/task.git # timeout=10
+Fetching upstream changes from https://github.com/Michaelikus/task.git
+ > git --version # timeout=10
+ > git --version # 'git version 2.41.0'
+ > git fetch --tags --force --progress -- https://github.com/Michaelikus/task.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git rev-parse refs/remotes/origin/main^{commit} # timeout=10
+Checking out Revision ad4acc23f54fa803fa3fdd6408fb6690db669551 (refs/remotes/origin/main)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f ad4acc23f54fa803fa3fdd6408fb6690db669551 # timeout=10
+Commit message: "python3-selinux package added"
+ > git rev-list --no-walk 13a392d985dcd2161e4e15d7c56719af688aaa86 # timeout=10
+[task] $ /bin/sh -xe /tmp/jenkins9324140420903722416.sh
++ virtualenv vansible
+created virtual environment CPython3.11.6.final.0-64 in 1187ms
+  creator CPython3Posix(dest=/var/lib/jenkins/workspace/task/vansible, clear=False, no_vcs_ignore=False, global=False)
+  seeder FromAppData(extra_search_dir=/usr/share/python-wheels,download=False, pip=bundle, setuptools=bundle, wheel=bundle, via=copy, app_data_dir=/var/lib/jenkins/.local/share/virtualenv)
+    added seed packages: Jinja2==3.1.2, Pygments==2.16.1, ansible==8.5.0, ansible_compat==4.1.10, ansible_core==2.15.5, ansible_lint==6.21.1, ansible_playbook_grapher==2.1.0, attrs==23.1.0, bracex==2.4, certifi==2023.7.22, click==8.1.7, colour==0.1.5, distlib==0.3.7, filelock==3.13.1, graphviz==0.20.1, idna==3.4, jsonschema==4.19.2, jsonschema_specifications==2023.7.1, markdown_it_py==3.0.0, mdurl==0.1.2, mypy_extensions==1.0.0, packaging==23.2, pathspec==0.11.2, pip==22.3.1, platformdirs==3.11.0, pycparser==2.21, referencing==0.30.2, requests==2.31.0, resolvelib==1.0.1, rich==13.6.0, ruamel.yaml==0.17.40, setuptools==65.5.1, subprocess_tee==0.4.1, svg.path==6.3, urllib3==2.0.7, virtualenv==20.24.6, wcmatch==8.5, wheel==0.38.4, yamllint==1.32.0
+  activators BashActivator,CShellActivator,FishActivator,NushellActivator,PowerShellActivator,PythonActivator
++ source vansible/bin/activate
+++ '[' vansible/bin/activate = /tmp/jenkins9324140420903722416.sh ']'
+++ deactivate nondestructive
+++ unset -f pydoc
+++ '[' -z '' ']'
+++ '[' -z '' ']'
+++ hash -r
+++ '[' -z '' ']'
+++ unset VIRTUAL_ENV
+++ '[' '!' nondestructive = nondestructive ']'
+++ VIRTUAL_ENV=/var/lib/jenkins/workspace/task/vansible
+++ '[' linux-gnu = cygwin ']'
+++ '[' linux-gnu = msys ']'
+++ export VIRTUAL_ENV
+++ _OLD_VIRTUAL_PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+++ PATH=/var/lib/jenkins/workspace/task/vansible/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+++ export PATH
+++ '[' -z '' ']'
+++ '[' -z '' ']'
+++ _OLD_VIRTUAL_PS1=
+++ '[' x '!=' x ']'
++++ basename /var/lib/jenkins/workspace/task/vansible
+++ PS1='(vansible) '
+++ export PS1
+++ alias pydoc
+++ true
+++ hash -r
++ pip3 install ansible
+Requirement already satisfied: ansible in ./vansible/lib/python3.11/site-packages (8.5.0)
+Requirement already satisfied: ansible-core~=2.15.5 in ./vansible/lib/python3.11/site-packages (from ansible) (2.15.5)
+Requirement already satisfied: jinja2>=3.0.0 in ./vansible/lib/python3.11/site-packages (from ansible-core~=2.15.5->ansible) (3.1.2)
+Requirement already satisfied: PyYAML>=5.1 in ./vansible/lib64/python3.11/site-packages (from ansible-core~=2.15.5->ansible) (6.0.1)
+Requirement already satisfied: cryptography in ./vansible/lib64/python3.11/site-packages (from ansible-core~=2.15.5->ansible) (41.0.5)
+Requirement already satisfied: packaging in ./vansible/lib/python3.11/site-packages (from ansible-core~=2.15.5->ansible) (23.2)
+Requirement already satisfied: resolvelib<1.1.0,>=0.5.3 in ./vansible/lib/python3.11/site-packages (from ansible-core~=2.15.5->ansible) (1.0.1)
+Requirement already satisfied: MarkupSafe>=2.0 in ./vansible/lib64/python3.11/site-packages (from jinja2>=3.0.0->ansible-core~=2.15.5->ansible) (2.1.3)
+Requirement already satisfied: cffi>=1.12 in ./vansible/lib64/python3.11/site-packages (from cryptography->ansible-core~=2.15.5->ansible) (1.16.0)
+Requirement already satisfied: pycparser in ./vansible/lib/python3.11/site-packages (from cffi>=1.12->cryptography->ansible-core~=2.15.5->ansible) (2.21)
+
+[notice] A new release of pip available: 22.3.1 -> 23.3.1
+[notice] To update, run: pip install --upgrade pip
++ pip3 install --upgrade pip
+Requirement already satisfied: pip in ./vansible/lib/python3.11/site-packages (22.3.1)
+Collecting pip
+  Using cached pip-23.3.1-py3-none-any.whl (2.1 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 22.3.1
+    Uninstalling pip-22.3.1:
+      Successfully uninstalled pip-22.3.1
+Successfully installed pip-23.3.1
++ pip3 install --upgrade virtualenv
+Requirement already satisfied: virtualenv in ./vansible/lib/python3.11/site-packages (20.24.6)
+Requirement already satisfied: distlib<1,>=0.3.7 in ./vansible/lib/python3.11/site-packages (from virtualenv) (0.3.7)
+Requirement already satisfied: filelock<4,>=3.12.2 in ./vansible/lib/python3.11/site-packages (from virtualenv) (3.13.1)
+Requirement already satisfied: platformdirs<4,>=3.9.1 in ./vansible/lib/python3.11/site-packages (from virtualenv) (3.11.0)
++ pip3 install requests
+Requirement already satisfied: requests in ./vansible/lib/python3.11/site-packages (2.31.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in ./vansible/lib64/python3.11/site-packages (from requests) (3.3.1)
+Requirement already satisfied: idna<4,>=2.5 in ./vansible/lib/python3.11/site-packages (from requests) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./vansible/lib/python3.11/site-packages (from requests) (2.0.7)
+Requirement already satisfied: certifi>=2017.4.17 in ./vansible/lib/python3.11/site-packages (from requests) (2023.7.22)
++ pip3 install ansible
+Requirement already satisfied: ansible in ./vansible/lib/python3.11/site-packages (8.5.0)
+Requirement already satisfied: ansible-core~=2.15.5 in ./vansible/lib/python3.11/site-packages (from ansible) (2.15.5)
+Requirement already satisfied: jinja2>=3.0.0 in ./vansible/lib/python3.11/site-packages (from ansible-core~=2.15.5->ansible) (3.1.2)
+Requirement already satisfied: PyYAML>=5.1 in ./vansible/lib64/python3.11/site-packages (from ansible-core~=2.15.5->ansible) (6.0.1)
+Requirement already satisfied: cryptography in ./vansible/lib64/python3.11/site-packages (from ansible-core~=2.15.5->ansible) (41.0.5)
+Requirement already satisfied: packaging in ./vansible/lib/python3.11/site-packages (from ansible-core~=2.15.5->ansible) (23.2)
+Requirement already satisfied: resolvelib<1.1.0,>=0.5.3 in ./vansible/lib/python3.11/site-packages (from ansible-core~=2.15.5->ansible) (1.0.1)
+Requirement already satisfied: MarkupSafe>=2.0 in ./vansible/lib64/python3.11/site-packages (from jinja2>=3.0.0->ansible-core~=2.15.5->ansible) (2.1.3)
+Requirement already satisfied: cffi>=1.12 in ./vansible/lib64/python3.11/site-packages (from cryptography->ansible-core~=2.15.5->ansible) (1.16.0)
+Requirement already satisfied: pycparser in ./vansible/lib/python3.11/site-packages (from cffi>=1.12->cryptography->ansible-core~=2.15.5->ansible) (2.21)
++ pip3 install ansible-core
+Requirement already satisfied: ansible-core in ./vansible/lib/python3.11/site-packages (2.15.5)
+Requirement already satisfied: jinja2>=3.0.0 in ./vansible/lib/python3.11/site-packages (from ansible-core) (3.1.2)
+Requirement already satisfied: PyYAML>=5.1 in ./vansible/lib64/python3.11/site-packages (from ansible-core) (6.0.1)
+Requirement already satisfied: cryptography in ./vansible/lib64/python3.11/site-packages (from ansible-core) (41.0.5)
+Requirement already satisfied: packaging in ./vansible/lib/python3.11/site-packages (from ansible-core) (23.2)
+Requirement already satisfied: resolvelib<1.1.0,>=0.5.3 in ./vansible/lib/python3.11/site-packages (from ansible-core) (1.0.1)
+Requirement already satisfied: MarkupSafe>=2.0 in ./vansible/lib64/python3.11/site-packages (from jinja2>=3.0.0->ansible-core) (2.1.3)
+Requirement already satisfied: cffi>=1.12 in ./vansible/lib64/python3.11/site-packages (from cryptography->ansible-core) (1.16.0)
+Requirement already satisfied: pycparser in ./vansible/lib/python3.11/site-packages (from cffi>=1.12->cryptography->ansible-core) (2.21)
++ pip3 install ansible-lint
+Requirement already satisfied: ansible-lint in ./vansible/lib/python3.11/site-packages (6.21.1)
+Requirement already satisfied: ansible-core>=2.12.0 in ./vansible/lib/python3.11/site-packages (from ansible-lint) (2.15.5)
+Requirement already satisfied: ansible-compat>=4.1.10 in ./vansible/lib/python3.11/site-packages (from ansible-lint) (4.1.10)
+Requirement already satisfied: black>=22.8.0 in ./vansible/lib64/python3.11/site-packages (from ansible-lint) (23.10.1)
+Requirement already satisfied: filelock>=3.3.0 in ./vansible/lib/python3.11/site-packages (from ansible-lint) (3.13.1)
+Requirement already satisfied: jsonschema>=4.10.0 in ./vansible/lib/python3.11/site-packages (from ansible-lint) (4.19.2)
+Requirement already satisfied: packaging>=21.3 in ./vansible/lib/python3.11/site-packages (from ansible-lint) (23.2)
+Requirement already satisfied: pathspec>=0.10.3 in ./vansible/lib/python3.11/site-packages (from ansible-lint) (0.11.2)
+Requirement already satisfied: pyyaml>=5.4.1 in ./vansible/lib64/python3.11/site-packages (from ansible-lint) (6.0.1)
+Requirement already satisfied: rich>=12.0.0 in ./vansible/lib/python3.11/site-packages (from ansible-lint) (13.6.0)
+Requirement already satisfied: ruamel.yaml!=0.17.29,!=0.17.30,<0.18,>=0.17.0 in ./vansible/lib/python3.11/site-packages (from ansible-lint) (0.17.40)
+Requirement already satisfied: requests>=2.31.0 in ./vansible/lib/python3.11/site-packages (from ansible-lint) (2.31.0)
+Requirement already satisfied: subprocess-tee>=0.4.1 in ./vansible/lib/python3.11/site-packages (from ansible-lint) (0.4.1)
+Requirement already satisfied: yamllint>=1.30.0 in ./vansible/lib/python3.11/site-packages (from ansible-lint) (1.32.0)
+Requirement already satisfied: wcmatch>=8.1.2 in ./vansible/lib/python3.11/site-packages (from ansible-lint) (8.5)
+Requirement already satisfied: jinja2>=3.0.0 in ./vansible/lib/python3.11/site-packages (from ansible-core>=2.12.0->ansible-lint) (3.1.2)
+Requirement already satisfied: cryptography in ./vansible/lib64/python3.11/site-packages (from ansible-core>=2.12.0->ansible-lint) (41.0.5)
+Requirement already satisfied: resolvelib<1.1.0,>=0.5.3 in ./vansible/lib/python3.11/site-packages (from ansible-core>=2.12.0->ansible-lint) (1.0.1)
+Requirement already satisfied: click>=8.0.0 in ./vansible/lib/python3.11/site-packages (from black>=22.8.0->ansible-lint) (8.1.7)
+Requirement already satisfied: mypy-extensions>=0.4.3 in ./vansible/lib/python3.11/site-packages (from black>=22.8.0->ansible-lint) (1.0.0)
+Requirement already satisfied: platformdirs>=2 in ./vansible/lib/python3.11/site-packages (from black>=22.8.0->ansible-lint) (3.11.0)
+Requirement already satisfied: attrs>=22.2.0 in ./vansible/lib/python3.11/site-packages (from jsonschema>=4.10.0->ansible-lint) (23.1.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in ./vansible/lib/python3.11/site-packages (from jsonschema>=4.10.0->ansible-lint) (2023.7.1)
+Requirement already satisfied: referencing>=0.28.4 in ./vansible/lib/python3.11/site-packages (from jsonschema>=4.10.0->ansible-lint) (0.30.2)
+Requirement already satisfied: rpds-py>=0.7.1 in ./vansible/lib64/python3.11/site-packages (from jsonschema>=4.10.0->ansible-lint) (0.10.6)
+Requirement already satisfied: charset-normalizer<4,>=2 in ./vansible/lib64/python3.11/site-packages (from requests>=2.31.0->ansible-lint) (3.3.1)
+Requirement already satisfied: idna<4,>=2.5 in ./vansible/lib/python3.11/site-packages (from requests>=2.31.0->ansible-lint) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./vansible/lib/python3.11/site-packages (from requests>=2.31.0->ansible-lint) (2.0.7)
+Requirement already satisfied: certifi>=2017.4.17 in ./vansible/lib/python3.11/site-packages (from requests>=2.31.0->ansible-lint) (2023.7.22)
+Requirement already satisfied: markdown-it-py>=2.2.0 in ./vansible/lib/python3.11/site-packages (from rich>=12.0.0->ansible-lint) (3.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in ./vansible/lib/python3.11/site-packages (from rich>=12.0.0->ansible-lint) (2.16.1)
+Requirement already satisfied: ruamel.yaml.clib>=0.2.7 in ./vansible/lib64/python3.11/site-packages (from ruamel.yaml!=0.17.29,!=0.17.30,<0.18,>=0.17.0->ansible-lint) (0.2.8)
+Requirement already satisfied: bracex>=2.1.1 in ./vansible/lib/python3.11/site-packages (from wcmatch>=8.1.2->ansible-lint) (2.4)
+Requirement already satisfied: MarkupSafe>=2.0 in ./vansible/lib64/python3.11/site-packages (from jinja2>=3.0.0->ansible-core>=2.12.0->ansible-lint) (2.1.3)
+Requirement already satisfied: mdurl~=0.1 in ./vansible/lib/python3.11/site-packages (from markdown-it-py>=2.2.0->rich>=12.0.0->ansible-lint) (0.1.2)
+Requirement already satisfied: cffi>=1.12 in ./vansible/lib64/python3.11/site-packages (from cryptography->ansible-core>=2.12.0->ansible-lint) (1.16.0)
+Requirement already satisfied: pycparser in ./vansible/lib/python3.11/site-packages (from cffi>=1.12->cryptography->ansible-core>=2.12.0->ansible-lint) (2.21)
++ pip3 install ansible-playbook-grapher
+Requirement already satisfied: ansible-playbook-grapher in ./vansible/lib/python3.11/site-packages (2.1.0)
+Requirement already satisfied: ansible-core<2.16,>=2.15 in ./vansible/lib/python3.11/site-packages (from ansible-playbook-grapher) (2.15.5)
+Requirement already satisfied: graphviz<1,>=0.18 in ./vansible/lib/python3.11/site-packages (from ansible-playbook-grapher) (0.20.1)
+Requirement already satisfied: colour<1 in ./vansible/lib/python3.11/site-packages (from ansible-playbook-grapher) (0.1.5)
+Requirement already satisfied: lxml<5 in ./vansible/lib64/python3.11/site-packages (from ansible-playbook-grapher) (4.9.3)
+Requirement already satisfied: svg.path<7 in ./vansible/lib/python3.11/site-packages (from ansible-playbook-grapher) (6.3)
+Requirement already satisfied: jinja2>=3.0.0 in ./vansible/lib/python3.11/site-packages (from ansible-core<2.16,>=2.15->ansible-playbook-grapher) (3.1.2)
+Requirement already satisfied: PyYAML>=5.1 in ./vansible/lib64/python3.11/site-packages (from ansible-core<2.16,>=2.15->ansible-playbook-grapher) (6.0.1)
+Requirement already satisfied: cryptography in ./vansible/lib64/python3.11/site-packages (from ansible-core<2.16,>=2.15->ansible-playbook-grapher) (41.0.5)
+Requirement already satisfied: packaging in ./vansible/lib/python3.11/site-packages (from ansible-core<2.16,>=2.15->ansible-playbook-grapher) (23.2)
+Requirement already satisfied: resolvelib<1.1.0,>=0.5.3 in ./vansible/lib/python3.11/site-packages (from ansible-core<2.16,>=2.15->ansible-playbook-grapher) (1.0.1)
+Requirement already satisfied: MarkupSafe>=2.0 in ./vansible/lib64/python3.11/site-packages (from jinja2>=3.0.0->ansible-core<2.16,>=2.15->ansible-playbook-grapher) (2.1.3)
+Requirement already satisfied: cffi>=1.12 in ./vansible/lib64/python3.11/site-packages (from cryptography->ansible-core<2.16,>=2.15->ansible-playbook-grapher) (1.16.0)
+Requirement already satisfied: pycparser in ./vansible/lib/python3.11/site-packages (from cffi>=1.12->cryptography->ansible-core<2.16,>=2.15->ansible-playbook-grapher) (2.21)
++ ansible-galaxy collection install ansible.posix
+Starting galaxy collection install process
+Nothing to do. All requested collections are already installed. If you want to reinstall them, consider using `--force`.
++ cp ./ansible.cfg ./ansible.cfg.1
++ cat ./ansible.cfg.1
++ grep -v private_key_file
++ echo private_key_file=/var/lib/jenkins/.ssh/ansible_ed25519
++ ansible-playbook -i inventory/hosts-sber.yml common.yml
+
+PLAY [sber] ********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [fedora02]
+ok: [fedora03]
+ok: [fedora01]
+
+TASK [common : Install typical packages] ***************************************
+changed: [fedora01] => (item=['jq', 'htop', 'tmux', 'screen', 'mc', 'net-tools', 'python3-libselinux'])
+changed: [fedora03] => (item=['jq', 'htop', 'tmux', 'screen', 'mc', 'net-tools', 'python3-libselinux'])
+changed: [fedora02] => (item=['jq', 'htop', 'tmux', 'screen', 'mc', 'net-tools', 'python3-libselinux'])
+
+TASK [common : Disable SELinux] ************************************************
+[WARNING]: SELinux state temporarily changed from 'enforcing' to 'permissive'.
+State change will take effect next reboot.
+changed: [fedora01]
+changed: [fedora03]
+changed: [fedora02]
+
+TASK [common : Disable firewalld] **********************************************
+changed: [fedora03]
+changed: [fedora02]
+changed: [fedora01]
+
+TASK [common : Tuning sshd] ****************************************************
+included: /var/lib/jenkins/workspace/task/roles/common/tasks/sshd.yml for fedora01, fedora02, fedora03
+
+TASK [common : Deploy sshd_config] *********************************************
+changed: [fedora01]
+changed: [fedora02]
+changed: [fedora03]
+
+PLAY RECAP *********************************************************************
+fedora01                   : ok=6    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+fedora02                   : ok=6    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+fedora03                   : ok=6    changed=4    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
+Finished: SUCCESS
